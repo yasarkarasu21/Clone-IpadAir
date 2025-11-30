@@ -1,0 +1,5 @@
+{
+  "name": "iPad Air Clone",
+  "description": "A responsive recreation of the iPad Air product page using React and Tailwind CSS, featuring interactive galleries and smooth animations.",
+  "requestFramePermissions": []
+}

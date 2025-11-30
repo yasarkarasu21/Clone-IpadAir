@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="iPad Air - Apple (TR)" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="iPad Air - Apple (TR)">
     <title>iPad Air - Apple (TR)</title>
     
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Icons (Lucide via CDN for simplicity or FontAwesome) - Using simple SVGs inline or a library is better, here using FontAwesome for Bootstrap compatibility -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.0",
@@ -27,440 +26,458 @@
 }
 </script>
 </head>
-  <body>
+<body>
     
     <!-- Global Navigation -->
     <nav class="global-nav">
-      <div class="container max-w-1024">
-        <div class="d-flex justify-content-between align-items-center h-100">
-          <!-- Mobile Menu Button -->
-          <button class="mobile-menu-btn d-md-none text-white border-0 bg-transparent" id="mobileMenuBtn">
-            <i class="fa-solid fa-bars"></i>
-          </button>
+        <div class="container global-nav-content">
+            <div class="d-flex justify-content-between align-items-center h-100">
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn d-md-none" id="mobileMenuBtn" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-          <!-- Logo -->
-          <a href="#" class="nav-logo text-white opacity-hover">
-            <i class="fa-brands fa-apple fa-lg"></i>
-          </a>
+                <!-- Logo -->
+                <a href="#" class="nav-logo">
+                    <i class="fa-brands fa-apple"></i>
+                </a>
 
-          <!-- Desktop Links -->
-          <div class="d-none d-md-flex gap-4">
-            <a href="#" class="nav-link-item">Store</a>
-            <a href="#" class="nav-link-item">Mac</a>
-            <a href="#" class="nav-link-item">iPad</a>
-            <a href="#" class="nav-link-item">iPhone</a>
-            <a href="#" class="nav-link-item">Watch</a>
-            <a href="#" class="nav-link-item">AirPods</a>
-            <a href="#" class="nav-link-item">TV ve Ev</a>
-            <a href="#" class="nav-link-item">Eğlence</a>
-            <a href="#" class="nav-link-item">Aksesuarlar</a>
-            <a href="#" class="nav-link-item">Destek</a>
-          </div>
+                <!-- Desktop Links -->
+                <div class="d-none d-md-flex nav-links">
+                    <a href="#">Store</a>
+                    <a href="#">Mac</a>
+                    <a href="#">iPad</a>
+                    <a href="#">iPhone</a>
+                    <a href="#">Watch</a>
+                    <a href="#">AirPods</a>
+                    <a href="#">TV ve Ev</a>
+                    <a href="#">Eğlence</a>
+                    <a href="#">Aksesuarlar</a>
+                    <a href="#">Destek</a>
+                </div>
 
-          <!-- Actions -->
-          <div class="d-flex gap-3">
-            <a href="#" class="text-white opacity-hover"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="#" class="text-white opacity-hover"><i class="fa-solid fa-bag-shopping"></i></a>
-          </div>
+                <!-- Actions -->
+                <div class="d-flex nav-actions gap-3">
+                    <a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" aria-label="Shopping Bag"><i class="fa-solid fa-bag-shopping"></i></a>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <!-- Mobile Menu Dropdown -->
-      <div class="mobile-menu d-none" id="mobileMenu">
-        <ul class="list-unstyled p-4">
-          <li class="border-bottom border-secondary py-2"><a href="#" class="text-white text-decoration-none fs-5">Store</a></li>
-          <li class="border-bottom border-secondary py-2"><a href="#" class="text-white text-decoration-none fs-5">Mac</a></li>
-          <li class="border-bottom border-secondary py-2"><a href="#" class="text-white text-decoration-none fs-5">iPad</a></li>
-          <li class="border-bottom border-secondary py-2"><a href="#" class="text-white text-decoration-none fs-5">iPhone</a></li>
-          <li class="border-bottom border-secondary py-2"><a href="#" class="text-white text-decoration-none fs-5">Watch</a></li>
-          <li class="border-bottom border-secondary py-2"><a href="#" class="text-white text-decoration-none fs-5">AirPods</a></li>
-        </ul>
-      </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu-dropdown" id="mobileMenu">
+            <div class="container">
+                <ul class="list-unstyled">
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Mac</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#">Watch</a></li>
+                    <li><a href="#">AirPods</a></li>
+                    <li><a href="#">TV ve Ev</a></li>
+                    <li><a href="#">Eğlence</a></li>
+                    <li><a href="#">Aksesuarlar</a></li>
+                    <li><a href="#">Destek</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Local Navigation -->
-    <div class="local-nav sticky-top bg-white-glass border-bottom">
-      <div class="container max-w-1024 d-flex justify-content-between align-items-center py-2">
-        <a href="#" class="text-dark text-decoration-none fs-4 fw-bold">iPad Air</a>
-        
-        <div class="d-none d-md-flex align-items-center gap-3">
-          <a href="#" class="text-dark text-decoration-none small text-muted">Genel Bakış</a>
-          <a href="#" class="text-dark text-decoration-none small hover-blue">Teknik Özellikler</a>
-          <a href="#" class="text-dark text-decoration-none small hover-blue">Karşılaştırın</a>
-          <a href="#" class="btn btn-primary btn-sm rounded-pill px-3">Satın Alın</a>
-        </div>
+    <div class="local-nav sticky-top" id="localNav">
+        <div class="container d-flex justify-content-between align-items-center h-100">
+            <a href="#" class="local-nav-title">iPad Air</a>
+            
+            <div class="d-none d-md-flex align-items-center gap-3 local-nav-links">
+                <a href="#" class="text-muted small">Genel Bakış</a>
+                <a href="#" class="small">Teknik Özellikler</a>
+                <a href="#" class="small">Karşılaştırın</a>
+                <a href="#" class="btn btn-primary btn-sm rounded-pill px-3 btn-buy">Satın Alın</a>
+            </div>
 
-        <button class="d-md-none border-0 bg-transparent" id="localMenuBtn">
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-      </div>
-      <!-- Mobile Local Menu -->
-      <div class="d-none bg-white w-100 border-bottom p-3 absolute" id="localMenu">
-        <a href="#" class="d-block py-2 text-dark text-decoration-none">Genel Bakış</a>
-        <a href="#" class="d-block py-2 text-dark text-decoration-none">Teknik Özellikler</a>
-        <a href="#" class="d-block py-2 text-dark text-decoration-none">Karşılaştırın</a>
-        <a href="#" class="d-block py-2 text-primary fw-bold text-decoration-none">Satın Alın</a>
-      </div>
+            <button class="d-md-none mobile-local-btn" id="localMenuBtn">
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </div>
+        <!-- Mobile Local Menu -->
+        <div class="mobile-local-menu" id="localMenu">
+            <a href="#">Genel Bakış</a>
+            <a href="#">Teknik Özellikler</a>
+            <a href="#">Karşılaştırın</a>
+            <a href="#" class="active">Satın Alın</a>
+        </div>
     </div>
 
-    <!-- Main Content -->
     <main>
-      <!-- Hero Section -->
-      <section class="hero-section text-center pt-5 pb-5 bg-light-gray">
-        <div class="container">
-          <img src="https://www.apple.com/v/ipad-air/ae/images/overview/hero/hero_intro_logo__bnacncm3ehma_large.png" alt="iPad Air Logo" class="img-fluid mb-3" style="max-height: 60px;">
-          <h1 class="display-3 fw-bold mb-4 text-gradient letter-spacing-tight">İyi uçuşlar.</h1>
-          
-          <div class="hero-media mb-5 position-relative">
-            <video autoplay muted loop playsinline class="img-fluid rounded-3" style="max-height: 70vh; width: 100%; object-fit: contain;">
-              <source src="https://www.apple.com/105/media/us/ipad-air/2024/df9239d9-b05f-4fc6-9f57-8ce5c168833f/anim/hero/large.mp4" type="video/mp4">
-              <img src="https://www.apple.com/v/ipad-air/ae/images/overview/hero/hero_endframe__fvm22b45e5me_large.png" alt="iPad Air Hero" class="img-fluid">
-            </video>
-          </div>
+        <!-- Hero Section -->
+        <section class="hero-section text-center">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <img src="https://www.apple.com/v/ipad-air/ae/images/overview/hero/hero_intro_logo__bnacncm3ehma_large.png" alt="iPad Air Logo" class="hero-logo mb-3">
+                    <h1 class="hero-headline text-gradient mb-4">İyi uçuşlar.</h1>
+                    
+                    <div class="hero-video-container mb-4">
+                        <video autoplay muted loop playsinline class="hero-video">
+                            <source src="https://www.apple.com/105/media/us/ipad-air/2024/df9239d9-b05f-4fc6-9f57-8ce5c168833f/anim/hero/large.mp4" type="video/mp4">
+                            <img src="https://www.apple.com/v/ipad-air/ae/images/overview/hero/hero_endframe__fvm22b45e5me_large.png" alt="iPad Air Hero">
+                        </video>
+                    </div>
 
-          <div class="cta-group">
-            <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mb-3">Satın Alın</a>
-            <p class="fw-bold text-dark">Başlangıç fiyatı: 34.999 TL</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Highlights Section -->
-      <section class="highlights-section py-5 bg-white">
-        <div class="container max-w-1024 mb-4">
-          <h2 class="display-5 fw-bold mb-5">İşte öne çıkan başlıklar.</h2>
-        </div>
-
-        <div class="position-relative slider-container-wrapper">
-          <div class="d-flex overflow-auto gap-4 px-4 pb-4 no-scrollbar snap-x" id="highlightsSlider">
-            <!-- Card 1 -->
-            <div class="highlight-card bg-light-gray rounded-5 position-relative flex-shrink-0 snap-center">
-              <div class="card-text p-4 p-md-5 position-absolute top-0 start-0 w-100 z-2">
-                <p class="fs-3 fw-bold lh-sm">Yeni iPad Air. Apple M3 çip ile çok güçlü. Tüm görevlere hazır. Apple Intelligence için tasarlandı.</p>
-              </div>
-              <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/overview__ftbt78x57ueu_large.png" alt="Overview" class="card-img position-absolute bottom-0 start-0 w-100">
-            </div>
-
-            <!-- Card 2 -->
-            <div class="highlight-card bg-light-gray rounded-5 position-relative flex-shrink-0 snap-center">
-              <div class="card-text p-4 p-md-5 position-absolute top-0 start-0 w-100 z-2">
-                <p class="fs-3 fw-bold lh-sm">Dört mükemmel renk. 11 inç ve 13 inç seçeneği. Her iki modelde de göz alıcı Liquid Retina ekran.</p>
-              </div>
-              <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/sizes__rlelo55046iy_large.png" alt="Sizes" class="card-img position-absolute bottom-0 start-0 w-100">
-            </div>
-
-            <!-- Card 3 -->
-            <div class="highlight-card bg-light-gray rounded-5 position-relative flex-shrink-0 snap-center">
-              <div class="card-text p-4 p-md-5 position-absolute top-0 start-0 w-100 z-2">
-                <p class="fs-3 fw-bold lh-sm">İleri seviye yaratıcılık için Apple Pencil Pro.</p>
-              </div>
-              <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/pencil__fxk4r1ij8tei_large.jpg" alt="Pencil" class="card-img position-absolute bottom-0 start-0 w-100" style="object-fit: cover;">
-            </div>
-
-            <!-- Card 4 -->
-            <div class="highlight-card bg-light-gray rounded-5 position-relative flex-shrink-0 snap-center">
-              <div class="card-text p-4 p-md-5 position-absolute top-0 start-0 w-100 z-2">
-                <p class="fs-3 fw-bold lh-sm">iPadOS ve muhteşem uygulamalar, işlerinizi halletmenin sihirli yollarını sunuyor.</p>
-              </div>
-              <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/ipados__cyr733thza0y_large.png" alt="iPadOS" class="card-img position-absolute bottom-0 start-0 w-100">
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <div class="container max-w-1024 d-flex justify-content-end gap-2 mt-3">
-            <button class="btn btn-secondary rounded-circle control-btn" onclick="scrollHighlights('left')"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="btn btn-secondary rounded-circle control-btn" onclick="scrollHighlights('right')"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Size Selector -->
-      <section class="size-section py-5 text-center bg-white">
-        <div class="container">
-          <h2 class="display-4 fw-bold">İki farklı boyut.</h2>
-          <h2 class="display-4 fw-bold text-gradient mb-5">Sonsuz olasılık.</h2>
-
-          <div class="position-relative mb-5 d-flex justify-content-center align-items-end" style="height: 500px;">
-            <img id="sizeImg13" src="https://www.apple.com/tr/ipad-air/images/overview/two-sizes/gallery-toggle/spin_static__bdjk0pc0tphe_large.png" class="img-fluid position-absolute transition-opacity" style="max-height: 500px; opacity: 1; z-index: 2;" alt="13 inch">
-            <img id="sizeImg11" src="https://www.apple.com/tr/ipad-air/images/overview/two-sizes/gallery-toggle/spin_reverse_static__ehmkt90jzu6a_large.png" class="img-fluid position-absolute transition-opacity" style="max-height: 420px; opacity: 0; z-index: 1;" alt="11 inch">
-          </div>
-
-          <div class="d-flex justify-content-center gap-3 mb-4">
-            <button class="btn btn-light rounded-pill px-4 py-2" id="btn11" onclick="switchSize('11')">11 inç model</button>
-            <button class="btn btn-dark rounded-pill px-4 py-2" id="btn13" onclick="switchSize('13')">13 inç model</button>
-          </div>
-
-          <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
-            İster 11 inç isterseniz 13 inç iPad Air modellerinden birini seçin. Her ikisinin de sahip olduğu göz alıcı, yüksek çözünürlüklü Liquid Retina ekran, yapmayı sevdiğiniz her şeye hayat katıyor.
-          </p>
-        </div>
-      </section>
-
-      <!-- M3 Chip Section -->
-      <section class="m3-section py-5 bg-dark text-white">
-        <div class="container max-w-1024">
-          <div class="row align-items-end mb-5">
-            <div class="col-md-8">
-              <div class="badge bg-secondary bg-opacity-25 text-white mb-3 px-3 py-2 rounded-pill d-inline-flex align-items-center gap-2">
-                <i class="fa-solid fa-microchip"></i> M3 ÇİP
-              </div>
-              <h2 class="display-3 fw-bold mb-4">M3. <br><span class="text-gradient-blue">Güçlü bir alkış.</span></h2>
-              <p class="fs-5 text-secondary">iPad Air şimdi M3 çipin inanılmaz performansına sahip. 8 çekirdekli CPU, 10 çekirdekli GPU ve Neural Engine ile M1 çipe sahip iPad Air'e kıyasla %50'ye kadar daha hızlı.</p>
-            </div>
-            <div class="col-md-4">
-              <div class="bg-secondary bg-opacity-10 p-4 rounded-4 border border-secondary border-opacity-25">
-                <h5 class="text-uppercase text-secondary fs-6 mb-4">M1'e Kıyasla Performans</h5>
-                <div class="mb-3">
-                  <div class="d-flex justify-content-between small mb-1"><span>CPU</span><span class="text-primary">1.5x Daha Hızlı</span></div>
-                  <div class="progress" style="height: 6px;"><div class="progress-bar bg-primary" style="width: 80%"></div></div>
+                    <div class="cta-group">
+                        <a href="#" class="btn btn-primary btn-buy-lg mb-3">Satın Alın</a>
+                        <p class="price-text">Başlangıç fiyatı: 34.999 TL</p>
+                    </div>
                 </div>
-                <div class="mb-3">
-                  <div class="d-flex justify-content-between small mb-1"><span>GPU</span><span class="text-info">1.6x Daha Hızlı</span></div>
-                  <div class="progress" style="height: 6px;"><div class="progress-bar bg-info" style="width: 85%"></div></div>
-                </div>
-                <div>
-                  <div class="d-flex justify-content-between small mb-1"><span>Neural Engine</span><span class="text-warning">%60 Daha Hızlı</span></div>
-                  <div class="progress" style="height: 6px;"><div class="progress-bar bg-warning" style="width: 95%"></div></div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="position-relative rounded-5 overflow-hidden">
-            <img src="https://www.apple.com/v/ipad-air/ae/images/overview/chip/hero_bottom__bfmqcj7euvf6_large.jpg" alt="Gaming" class="img-fluid w-100">
-            <div class="position-absolute bottom-0 start-0 p-4 p-md-5 bg-gradient-to-t w-100">
-              <h3 class="fw-bold">Grafik canavarı.</h3>
-              <p class="text-light">Donanım hızlandırmalı ışın izleme ve örgü gölgelendirme teknolojileriyle konsol kalitesinde oyun deneyimi.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Apple Intelligence Section -->
-      <section class="ai-section py-5 bg-white overflow-hidden position-relative">
-        <div class="container max-w-1024 position-relative z-2">
-          <div class="text-center mb-5">
-            <h2 class="h4 fw-bold text-gradient-purple mb-2">Apple Intelligence</h2>
-            <h3 class="display-4 fw-bold mb-4">Kişisel, gizli ve güçlü.</h3>
-            <p class="fs-5 text-muted mx-auto" style="max-width: 700px;">iPad Air, kendinizi ifade etmenize ve işlerinizi kolayca halletmenize yardımcı olan kişisel yapay zeka sistemi Apple Intelligence için tasarlandı.</p>
-          </div>
+        <!-- Highlights Section -->
+        <section class="highlights-section">
+            <div class="container mb-5">
+                <h2 class="section-headline">İşte öne çıkan başlıklar.</h2>
+            </div>
 
-          <div class="row g-4">
-            <div class="col-md-4">
-              <div class="bg-light-gray p-4 rounded-5 h-100 text-center">
-                <div class="bg-white rounded-4 mb-4 overflow-hidden d-flex align-items-center justify-content-center" style="height: 200px;">
-                  <img src="https://www.apple.com/v/ipad-air/ae/images/overview/apple-intelligence/writingtools__d5nqlmsxqfiq_large.png" class="img-fluid w-75" alt="Writing Tools">
-                </div>
-                <h4 class="fw-bold">Yazma Araçları</h4>
-                <p class="text-muted small">Metinlerinizi düzeltin, özetleyin veya yeniden yazın.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="bg-light-gray p-4 rounded-5 h-100 text-center">
-                <div class="bg-white rounded-4 mb-4 overflow-hidden d-flex align-items-center justify-content-center" style="height: 200px;">
-                  <i class="fa-solid fa-wand-magic-sparkles fa-3x text-gradient-purple"></i>
-                </div>
-                <h4 class="fw-bold">Görsel Sihirbazı</h4>
-                <p class="text-muted small">Taslak çizimlerinizi harika görsellere dönüştürün.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="bg-light-gray p-4 rounded-5 h-100 text-center">
-                <div class="bg-white rounded-4 mb-4 overflow-hidden d-flex align-items-center justify-content-center" style="height: 200px;">
-                  <i class="fa-solid fa-fingerprint fa-3x text-success"></i>
-                </div>
-                <h4 class="fw-bold">Özel Bulut Bilişim</h4>
-                <p class="text-muted small">Gizliliğiniz, aygıt içi işlemenin ötesine geçerek bulutta da korunur.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <div class="highlights-slider-wrapper">
+                <div class="highlights-track" id="highlightsTrack">
+                    <!-- Card 1: Overview -->
+                    <div class="highlight-card">
+                        <div class="card-content">
+                            <p class="card-text">Yeni iPad Air. Apple M3 çip ile çok güçlü. Tüm görevlere hazır. Apple Intelligence için tasarlandı.</p>
+                            <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/overview__ftbt78x57ueu_large.png" alt="Overview" class="card-image">
+                        </div>
+                    </div>
 
-      <!-- Camera Section -->
-      <section class="camera-section py-5 bg-light-gray">
-        <div class="container max-w-1024 text-center">
-          <h2 class="display-4 fw-bold mb-4">Kameralar. <br><span class="text-muted">Hayal ettiğiniz her anı yakalayın.</span></h2>
-          
-          <div class="row g-4 mt-4 text-start">
-            <div class="col-md-6">
-              <div class="bg-white rounded-5 overflow-hidden shadow-sm h-100">
-                <div class="bg-secondary bg-opacity-10 position-relative" style="height: 300px;">
-                  <img src="https://www.apple.com/v/ipad-air/ae/images/overview/cameras/modal/front_landscape_camera_screen__djazchpx0w6e_large.jpg" class="w-100 h-100 object-fit-cover" alt="Front Camera">
-                  <div class="position-absolute top-0 end-0 m-3 bg-dark text-white rounded-circle p-2 px-3 small">
-                    <i class="fa-solid fa-camera"></i>
-                  </div>
-                </div>
-                <div class="p-4 p-md-5">
-                  <span class="badge bg-primary bg-opacity-10 text-primary mb-3">ÖN KAMERA</span>
-                  <h3 class="fw-bold mb-3">Yatay 12 MP Ultra Geniş Kamera</h3>
-                  <p class="text-muted">Artık iPad Air'in uzun kenarında. <strong>Ana Sahne</strong> özelliği, sizi kadrajın ortasında tutar.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="bg-white rounded-5 overflow-hidden shadow-sm h-100">
-                <div class="bg-secondary bg-opacity-10 position-relative" style="height: 300px;">
-                  <img src="https://www.apple.com/v/ipad-air/ae/images/overview/cameras/modal/back_camera__ejrz57qieeaa_large.jpg" class="w-100 h-100 object-fit-cover" alt="Back Camera">
-                  <div class="position-absolute top-0 end-0 m-3 bg-dark text-white rounded-circle p-2 px-3 small">
-                    <i class="fa-solid fa-camera"></i>
-                  </div>
-                </div>
-                <div class="p-4 p-md-5">
-                  <span class="badge bg-info bg-opacity-10 text-info mb-3">ARKA KAMERA</span>
-                  <h3 class="fw-bold mb-3">12 MP Geniş Kamera</h3>
-                  <p class="text-muted">Capcanlı fotoğraflar ve <strong>4K videolar</strong> çekin. Belgeleri tarayın ve anında işaretleyin.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                    <!-- Card 2: Sizes -->
+                    <div class="highlight-card">
+                        <div class="card-content">
+                            <p class="card-text">Dört mükemmel renk. 11 inç ve 13 inç seçeneği. Her iki modelde de göz alıcı Liquid Retina ekran.</p>
+                            <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/sizes__rlelo55046iy_large.png" alt="Sizes" class="card-image">
+                        </div>
+                    </div>
 
-      <!-- Accessories Section -->
-      <section class="accessories-section py-5 bg-white">
-        <div class="container max-w-1024">
-          <div class="text-center mb-5">
-            <h2 class="display-4 fw-bold">Aksesuarlar.</h2>
-            <h3 class="display-5 fw-bold text-gradient-blue mb-4">Yaratıcılığın uç noktası.</h3>
-            <p class="fs-5 text-muted">Apple Pencil Pro ve Magic Keyboard ile iPad Air'in sınırlarını zorlayın.</p>
-          </div>
+                    <!-- Card 3: Pencil -->
+                    <div class="highlight-card">
+                        <div class="card-content">
+                            <p class="card-text">İleri seviye yaratıcılık için Apple Pencil Pro.</p>
+                            <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/pencil__fxk4r1ij8tei_large.jpg" alt="Pencil" class="card-image object-cover">
+                        </div>
+                    </div>
 
-          <!-- Pencil Pro -->
-          <div class="position-relative rounded-5 overflow-hidden mb-5 group-hover-scale">
-            <img src="https://www.apple.com/tr/ipad-air/images/overview/apple-pencil-pro/modal/hero__giio85wbt76m_large.jpg" alt="Pencil Pro" class="img-fluid w-100">
-            <div class="position-absolute top-0 start-0 p-4 p-md-5" style="max-width: 450px;">
-              <div class="bg-white bg-opacity-75 backdrop-blur rounded-4 p-4 shadow-sm">
-                <h4 class="fw-bold mb-2"><i class="fa-solid fa-pen-nib me-2"></i> Apple Pencil Pro</h4>
-                <p class="text-muted small">Sıkıştırma, döndürme ve dokunsal geri bildirim ile şimdiye kadarki en gelişmiş deneyim.</p>
-                <ul class="list-unstyled small fw-bold text-dark">
-                  <li><i class="fa-solid fa-circle text-primary small me-2"></i> Dokunmadan Algılama (Hover)</li>
-                  <li><i class="fa-solid fa-circle text-primary small me-2"></i> Çift Dokunuş</li>
-                  <li><i class="fa-solid fa-circle text-primary small me-2"></i> Manyetik Yapışma</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+                    <!-- Card 4: iPadOS -->
+                    <div class="highlight-card">
+                        <div class="card-content">
+                            <p class="card-text">iPadOS ve muhteşem uygulamalar, işlerinizi halletmenin sihirli yollarını sunuyor.</p>
+                            <img src="https://www.apple.com/tr/ipad-air/images/overview/highlights/ipados__cyr733thza0y_large.png" alt="iPadOS" class="card-image">
+                        </div>
+                    </div>
+                </div>
 
-          <!-- Magic Keyboard -->
-          <div class="bg-light-gray rounded-5 p-4 p-md-5 d-flex flex-column flex-md-row align-items-center gap-5">
-            <div class="col-md-6">
-              <i class="fa-regular fa-keyboard fa-2x mb-3"></i>
-              <h3 class="fw-bold mb-3">Magic Keyboard</h3>
-              <p class="text-muted fs-5">Askı modeli tasarımı, arkadan aydınlatmalı tuşlar ve yerleşik trackpad ile iPad Air için mükemmel bir yol arkadaşı.</p>
-              <a href="#" class="text-primary text-decoration-none fw-bold">Klavyeler hakkında bilgi edinin <i class="fa-solid fa-arrow-right small"></i></a>
+                <div class="highlights-controls container">
+                    <button class="control-btn" onclick="scrollHighlights(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="control-btn" onclick="scrollHighlights(1)"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
-            <div class="col-md-6">
-              <img src="https://www.apple.com/tr/ipad-air/images/overview/keyboard/magic_keyboard_endframe__71lhsq2krsyy_large.png" alt="Magic Keyboard" class="img-fluid drop-shadow">
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Why Apple Section -->
-      <section class="why-apple py-5 bg-light-gray">
-        <div class="container max-w-1024">
-          <h2 class="display-6 fw-bold text-center mb-5">iPad’inizi neden <br>Apple’dan satın almalısınız?</h2>
-          <div class="row g-4">
-            <div class="col-6 col-md-3">
-              <div class="bg-white p-4 rounded-4 h-100 shadow-sm transition-up">
-                <i class="fa-regular fa-credit-card fa-2x mb-3 text-dark"></i>
-                <h5 class="fw-bold">Ödeme kolaylıkları</h5>
-                <p class="small text-muted mb-0">Taksit seçenekleri.</p>
-              </div>
+        <!-- Size Selector Section -->
+        <section class="size-section text-center">
+            <div class="container">
+                <h2 class="size-headline">İki farklı boyut.</h2>
+                <h2 class="size-headline text-gradient mb-5">Sonsuz olasılık.</h2>
+
+                <div class="size-image-container">
+                    <img id="sizeImg13" src="https://www.apple.com/tr/ipad-air/images/overview/two-sizes/gallery-toggle/spin_static__bdjk0pc0tphe_large.png" class="size-img active" alt="13 inch">
+                    <img id="sizeImg11" src="https://www.apple.com/tr/ipad-air/images/overview/two-sizes/gallery-toggle/spin_reverse_static__ehmkt90jzu6a_large.png" class="size-img" alt="11 inch">
+                </div>
+
+                <div class="size-toggles">
+                    <button class="size-btn" id="btn11" onclick="switchSize('11')">11 inç model</button>
+                    <button class="size-btn active" id="btn13" onclick="switchSize('13')">13 inç model</button>
+                </div>
+
+                <p class="section-desc">
+                    İster 11 inç isterseniz 13 inç iPad Air modellerinden birini seçin. Her ikisinin de sahip olduğu göz alıcı, yüksek çözünürlüklü Liquid Retina ekran, yapmayı sevdiğiniz her şeye hayat katıyor.
+                </p>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="bg-white p-4 rounded-4 h-100 shadow-sm transition-up">
-                <i class="fa-solid fa-graduation-cap fa-2x mb-3 text-dark"></i>
-                <h5 class="fw-bold">Eğitime özel</h5>
-                <p class="small text-muted mb-0">Tasarruf edin.</p>
-              </div>
+        </section>
+
+        <!-- M3 Chip Section -->
+        <section class="m3-section bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-end mb-5">
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <div class="m3-badge">
+                            <i class="fa-solid fa-microchip"></i> M3 ÇİP
+                        </div>
+                        <h2 class="m3-headline">M3. <br><span class="text-gradient-blue">Güçlü bir alkış.</span></h2>
+                        <p class="m3-desc">iPad Air şimdi M3 çipin inanılmaz performansına sahip. 8 çekirdekli CPU, 10 çekirdekli GPU ve Neural Engine ile M1 çipe sahip iPad Air'e kıyasla %50'ye kadar daha hızlı.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="m3-stats-card">
+                            <h5 class="stats-title">M1'e Kıyasla Performans</h5>
+                            <div class="stat-row">
+                                <div class="stat-label"><span>CPU</span> <span class="stat-val text-blue">1.5x Hızlı</span></div>
+                                <div class="progress"><div class="progress-bar bg-blue" style="width: 80%"></div></div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-label"><span>GPU</span> <span class="stat-val text-purple">1.6x Hızlı</span></div>
+                                <div class="progress"><div class="progress-bar bg-purple" style="width: 85%"></div></div>
+                            </div>
+                            <div class="stat-row">
+                                <div class="stat-label"><span>Neural Engine</span> <span class="stat-val text-orange">%60 Hızlı</span></div>
+                                <div class="progress"><div class="progress-bar bg-orange" style="width: 95%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m3-visual">
+                    <img src="https://www.apple.com/v/ipad-air/ae/images/overview/chip/hero_bottom__bfmqcj7euvf6_large.jpg" alt="Gaming on M3" class="img-fluid rounded-5">
+                    <div class="m3-visual-caption">
+                        <h3>Grafik canavarı.</h3>
+                        <p>Donanım hızlandırmalı ışın izleme teknolojisi.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="bg-white p-4 rounded-4 h-100 shadow-sm transition-up">
-                <i class="fa-solid fa-truck-fast fa-2x mb-3 text-dark"></i>
-                <h5 class="fw-bold">Ücretsiz kargo</h5>
-                <p class="small text-muted mb-0">Hızlı gönderim.</p>
-              </div>
+        </section>
+
+        <!-- Apple Intelligence Section -->
+        <section class="ai-section">
+            <div class="container">
+                <div class="ai-header text-center">
+                    <h2 class="ai-eyebrow">Apple Intelligence</h2>
+                    <h3 class="ai-headline">Kişisel, gizli ve güçlü.</h3>
+                    <p class="section-desc">iPad Air, kendinizi ifade etmenize ve işlerinizi kolayca halletmenize yardımcı olan kişisel yapay zeka sistemi Apple Intelligence için tasarlandı.</p>
+                </div>
+
+                <div class="row g-4 mt-5">
+                    <div class="col-md-4">
+                        <div class="ai-card">
+                            <div class="ai-icon-container">
+                                <img src="https://www.apple.com/v/ipad-air/ae/images/overview/apple-intelligence/writingtools__d5nqlmsxqfiq_large.png" alt="Writing Tools">
+                            </div>
+                            <h4>Yazma Araçları</h4>
+                            <p>Metinlerinizi düzeltin, özetleyin veya yeniden yazın.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="ai-card">
+                            <div class="ai-icon-container">
+                                <i class="fa-solid fa-wand-magic-sparkles fa-3x text-gradient-purple"></i>
+                            </div>
+                            <h4>Görsel Sihirbazı</h4>
+                            <p>Taslak çizimlerinizi harika görsellere dönüştürün.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="ai-card">
+                            <div class="ai-icon-container">
+                                <i class="fa-solid fa-shield-halved fa-3x text-success"></i>
+                            </div>
+                            <h4>Özel Bulut Bilişim</h4>
+                            <p>Gizliliğiniz bulutta da korunur.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-6 col-md-3">
-              <div class="bg-white p-4 rounded-4 h-100 shadow-sm transition-up">
-                <i class="fa-solid fa-pen-fancy fa-2x mb-3 text-dark"></i>
-                <h5 class="fw-bold">Kişiselleştirin</h5>
-                <p class="small text-muted mb-0">Ücretsiz lazer baskı.</p>
-              </div>
+        </section>
+
+        <!-- Cameras Section -->
+        <section class="camera-section bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-headline">Kameralar. <br><span class="text-muted">Hayal ettiğiniz her anı yakalayın.</span></h2>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="camera-card">
+                            <div class="camera-img-wrapper">
+                                <img src="https://www.apple.com/v/ipad-air/ae/images/overview/cameras/modal/front_landscape_camera_screen__djazchpx0w6e_large.jpg" alt="Front Camera">
+                                <div class="camera-badge"><i class="fa-solid fa-video"></i></div>
+                            </div>
+                            <div class="camera-content">
+                                <span class="badge-pill">ÖN KAMERA</span>
+                                <h3>Yatay 12 MP Ultra Geniş Kamera</h3>
+                                <p>Artık uzun kenarda. <strong>Ana Sahne</strong> özelliği ile her zaman odağı koruyun.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="camera-card">
+                            <div class="camera-img-wrapper">
+                                <img src="https://www.apple.com/v/ipad-air/ae/images/overview/cameras/modal/back_camera__ejrz57qieeaa_large.jpg" alt="Back Camera">
+                                <div class="camera-badge"><i class="fa-solid fa-camera"></i></div>
+                            </div>
+                            <div class="camera-content">
+                                <span class="badge-pill">ARKA KAMERA</span>
+                                <h3>12 MP Geniş Kamera</h3>
+                                <p>Capcanlı fotoğraflar ve <strong>4K videolar</strong> çekin. Belgeleri tarayın ve işaretleyin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- Accessories Section -->
+        <section class="accessories-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-headline">Aksesuarlar.</h2>
+                    <h3 class="section-headline text-gradient-blue">Yaratıcılığın uç noktası.</h3>
+                </div>
+
+                <!-- Pencil Pro -->
+                <div class="accessory-hero mb-5">
+                    <img src="https://www.apple.com/tr/ipad-air/images/overview/apple-pencil-pro/modal/hero__giio85wbt76m_large.jpg" alt="Pencil Pro">
+                    <div class="accessory-overlay">
+                        <h4><i class="fa-solid fa-pen-nib"></i> Apple Pencil Pro</h4>
+                        <p>Sıkıştırma, döndürme ve dokunsal geri bildirim.</p>
+                        <ul>
+                            <li>Dokunmadan Algılama (Hover)</li>
+                            <li>Çift Dokunuş</li>
+                            <li>Manyetik Yapışma</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Magic Keyboard -->
+                <div class="magic-keyboard-card">
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <i class="fa-regular fa-keyboard fa-2x mb-3"></i>
+                            <h3>Magic Keyboard</h3>
+                            <p>Askı modeli tasarımı, arkadan aydınlatmalı tuşlar ve yerleşik trackpad.</p>
+                            <a href="#" class="link-arrow">Klavyeler hakkında bilgi edinin <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="col-md-7">
+                            <img src="https://www.apple.com/tr/ipad-air/images/overview/keyboard/magic_keyboard_endframe__71lhsq2krsyy_large.png" alt="Magic Keyboard" class="img-fluid drop-shadow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connectivity -->
+        <section class="connectivity-section text-center">
+            <div class="container">
+                <h2>Bağlantı.</h2>
+                <h2 class="text-gradient">Hızlı ve kablosuz.</h2>
+                <p class="section-desc">Işık hızında Wi-Fi 6E. Ve 5G hücresel bağlantı özellikleri.</p>
+                <img src="https://www.apple.com/tr/ipad-air/images/overview/connectivity/connectivity_endframe__caymxw78xf9e_large.jpg" alt="Connectivity" class="connectivity-img">
+            </div>
+        </section>
+
+        <!-- Why Apple -->
+        <section class="why-apple-section">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">iPad’inizi neden <br>Apple’dan satın almalısınız?</h2>
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="why-card">
+                            <i class="fa-regular fa-credit-card fa-2x mb-3"></i>
+                            <h5>Ödeme kolaylıkları</h5>
+                            <p>Taksit seçenekleri.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="why-card">
+                            <i class="fa-solid fa-graduation-cap fa-2x mb-3"></i>
+                            <h5>Eğitime özel</h5>
+                            <p>Tasarruf edin.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="why-card">
+                            <i class="fa-solid fa-truck-fast fa-2x mb-3"></i>
+                            <h5>Ücretsiz kargo</h5>
+                            <p>Hızlı gönderim.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="why-card">
+                            <i class="fa-solid fa-pen-fancy fa-2x mb-3"></i>
+                            <h5>Kişiselleştirin</h5>
+                            <p>Ücretsiz lazer baskı.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-light-gray py-5 border-top small">
-      <div class="container max-w-1024">
-        <div class="border-bottom pb-4 mb-4 text-muted">
-          <p class="mb-1">1. Apple Intelligence beta sürümündedir.</p>
-          <p class="mb-1">2. Ekranlar yuvarlatılmış köşelere sahiptir.</p>
-          <p class="mb-0">3. Aksesuarlar ayrı satılır.</p>
-        </div>
+    <footer class="global-footer">
+        <div class="container">
+            <div class="footer-notes">
+                <p>1. Apple Intelligence beta sürümündedir. Bazı özellikler her bölgede veya her dilde kullanılamayabilir.</p>
+                <p>2. Ekranlar yuvarlatılmış köşelere sahiptir.</p>
+                <p>3. Aksesuarlar ayrı satılır.</p>
+            </div>
 
-        <div class="row mb-4">
-          <div class="col-6 col-md-2 mb-3">
-            <h6 class="fw-bold text-dark">Alışveriş</h6>
-            <ul class="list-unstyled text-muted">
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Store</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Mac</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">iPad</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">iPhone</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-2 mb-3">
-            <h6 class="fw-bold text-dark">Hesap</h6>
-            <ul class="list-unstyled text-muted">
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Hesabınızı Yönetin</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Apple Store Hesabı</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">iCloud.com</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-2 mb-3">
-            <h6 class="fw-bold text-dark">Apple Store</h6>
-            <ul class="list-unstyled text-muted">
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Mağaza Bulun</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Genius Bar</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Today at Apple</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-2 mb-3">
-            <h6 class="fw-bold text-dark">Kurumsal</h6>
-            <ul class="list-unstyled text-muted">
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Apple ve İş Dünyası</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Eğitim İçin Alışveriş</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-2 mb-3">
-            <h6 class="fw-bold text-dark">Değerler</h6>
-            <ul class="list-unstyled text-muted">
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Erişilebilirlik</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Çevre</a></li>
-              <li><a href="#" class="text-decoration-none text-muted hover-underline">Gizlilik</a></li>
-            </ul>
-          </div>
-        </div>
+            <div class="footer-links row">
+                <div class="col-6 col-md-2">
+                    <h6>Alışveriş</h6>
+                    <ul>
+                        <li><a href="#">Store</a></li>
+                        <li><a href="#">Mac</a></li>
+                        <li><a href="#">iPad</a></li>
+                        <li><a href="#">iPhone</a></li>
+                        <li><a href="#">Watch</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Hesap</h6>
+                    <ul>
+                        <li><a href="#">Hesabınızı Yönetin</a></li>
+                        <li><a href="#">Apple Store Hesabı</a></li>
+                        <li><a href="#">iCloud.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Apple Store</h6>
+                    <ul>
+                        <li><a href="#">Mağaza Bulun</a></li>
+                        <li><a href="#">Genius Bar</a></li>
+                        <li><a href="#">Today at Apple</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Kurumsal</h6>
+                    <ul>
+                        <li><a href="#">Apple ve İş Dünyası</a></li>
+                        <li><a href="#">Eğitim İçin Alışveriş</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Değerler</h6>
+                    <ul>
+                        <li><a href="#">Erişilebilirlik</a></li>
+                        <li><a href="#">Çevre</a></li>
+                        <li><a href="#">Gizlilik</a></li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="d-flex flex-column flex-md-row justify-content-between pt-3 border-top">
-          <div class="text-muted mb-2 mb-md-0">Telif Hakkı © 2025 Apple Inc. Tüm hakları saklıdır.</div>
-          <div class="d-flex gap-3 text-muted">
-            <a href="#" class="text-decoration-none text-muted hover-underline">Gizlilik Politikası</a> |
-            <a href="#" class="text-decoration-none text-muted hover-underline">Kullanım Şartları</a> |
-            <a href="#" class="text-decoration-none text-muted hover-underline">Site Haritası</a>
-          </div>
-          <a href="#" class="text-muted hover-underline mt-2 mt-md-0">Türkiye</a>
+            <div class="footer-bottom">
+                <p>Telif Hakkı © 2025 Apple Inc. Tüm hakları saklıdır.</p>
+                <div class="legal-links">
+                    <a href="#">Gizlilik Politikası</a>
+                    <span class="separator">|</span>
+                    <a href="#">Kullanım Şartları</a>
+                    <span class="separator">|</span>
+                    <a href="#">Satış ve Para İadesi</a>
+                    <span class="separator">|</span>
+                    <a href="#">Site Haritası</a>
+                </div>
+                <a href="#" class="locale-link">Türkiye</a>
+            </div>
         </div>
-      </div>
     </footer>
 
     <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>

@@ -1,9 +1,10 @@
-import React from 'react';
+
+import React, { useRef } from 'react';
 import { HIGHLIGHTS } from '../constants';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 
 const Highlights: React.FC = () => {
-  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -27,22 +28,27 @@ const Highlights: React.FC = () => {
       <div className="relative group">
         <div 
           ref={scrollRef}
-          className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 md:px-[max(calc((100vw-1024px)/2),1rem)] no-scrollbar pb-10"
+          className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 md:px-[max(calc((100vw-1024px)/2),1rem)] no-scrollbar pb-10 scroll-smooth"
         >
           {HIGHLIGHTS.map((item) => (
             <div 
               key={item.id} 
-              className="snap-center shrink-0 w-[280px] md:w-[400px] lg:w-[700px] h-[400px] md:h-[500px] lg:h-[520px] bg-[#f5f5f7] rounded-[2rem] overflow-hidden relative transition-all duration-300 hover:scale-[1.01] hover:shadow-lg"
+              className="snap-center shrink-0 w-[300px] md:w-[420px] lg:w-[700px] h-[500px] lg:h-[520px] bg-[#f5f5f7] rounded-[2rem] overflow-hidden relative transition-all duration-300 hover:scale-[1.01] hover:shadow-lg flex flex-col"
             >
-              <img 
-                src={item.image} 
-                alt={item.alt} 
-                className="absolute inset-0 w-full h-full object-contain object-bottom pb-8 md:pb-0"
-              />
-              <div className="absolute top-0 left-0 p-8 md:p-10 w-full z-10">
-                <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#1d1d1f] leading-snug md:leading-tight max-w-[90%] md:max-w-[80%]">
+              {/* Text Area - Pinned to top */}
+              <div className="p-8 md:p-10 w-full z-20 relative">
+                <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#1d1d1f] leading-snug md:leading-tight max-w-[95%]">
                   {item.title}
                 </p>
+              </div>
+              
+              {/* Image Area - Pinned to bottom */}
+              <div className="absolute inset-0 top-auto h-[65%] w-full z-10">
+                 <img 
+                  src={item.image} 
+                  alt={item.alt} 
+                  className="w-full h-full object-contain object-bottom"
+                />
               </div>
             </div>
           ))}
